@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reader.c                                        :+:      :+:    :+:   */
+/*   ft_anthill_validator.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/29 12:08:19 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/30 19:11:56 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/30 19:00:21 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/30 19:13:28 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem.h"
 
-t_anthill	*ft_reader(void)
+void	ft_anthill_validator(t_anthill *ah)
 {
-	t_anthill	*ah;
-	int			i;
-
-	i = 1;
-	if (!(ah = (t_anthill*)ft_memalloc(sizeof(*ah))))
-		ft_error("anthill allocation error");
-	while (i)
+	if (!ah->start)
+		ft_error("Missing Start");
+	if (!ah->end)
+		ft_error("Missing End");
+	if (ah->start != ah->end)
 	{
-		i = ft_line_reader(ah);
+		if (!ah->start->links)
+			ft_error("No links from starts");
+		if (!ah->end->links)
+			ft_error("No links to end");
 	}
-	ft_anthill_validator(ah);
-	return (ah);
 }

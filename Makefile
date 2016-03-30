@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/30 18:50:53 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/30 19:12:15 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC =   main.c \
 		ft_line_reader.c \
 		ft_room_finder.c \
 		ft_add_room.c \
+		ft_anthill_validator.c \
 
 
 OBJ = $(SRC:.c=.o)
