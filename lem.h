@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/25 15:14:36 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/30 16:05:52 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/30 16:18:35 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ struct						s_anthill
 {
 	int			ants;
 	t_room		*rooms;
+	int			next_start;
+	int			next_end;
 
 };
 
@@ -37,4 +39,5 @@ struct						s_room
 
 t_anthill	*ft_reader(void);
 void		ft_add_room(t_anthill *ah, char *name);
+int			ft_com(t_anthill *ah, char *str);
 #endif
