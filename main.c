@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/25 15:13:32 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/30 15:34:28 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/30 18:48:49 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ int	main(int argc, char **argv)
 	argc--;
 	argv++;
 	ah = ft_reader();
+	ft_print_anthill(ah);
 	return (0);
 }

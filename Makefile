@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/30 15:45:37 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/30 18:50:53 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,14 @@ FLAGS = -Wall -Wextra -Werror
 LIB = libft/libft.a
 
 SRC =   main.c \
-		ft_reader.c
+		ft_reader.c \
+		ft_add_link.c \
+		ft_com.c \
+		ft_print_anthill.c \
+		ft_line_reader.c \
+		ft_room_finder.c \
+		ft_add_room.c \
+
 
 OBJ = $(SRC:.c=.o)
 

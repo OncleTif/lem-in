@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 15:48:29 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/30 18:25:43 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/30 18:48:07 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	first_last(t_anthill *ah, t_room *room)
 		room->begin = 1;
 		ah->next_start = 0;
 	}
-	else if (ah->next_end)
+	if (ah->next_end)
 	{
 		room->end = 1;
 		ah->next_end = 0;
