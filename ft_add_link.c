@@ -6,18 +6,20 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 16:56:25 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/30 17:57:38 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/30 18:25:59 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem.h"
 
-int	ft_add_link(t_anthill *ah, char	*str)
+int	ft_add_link(t_anthill *ah, char *str)
 {
 	char	**tab;
 	t_room	*room1;
 	t_room	*room2;
 
+	if (ah->next_start || ah->next_end)
+		return (0);
 	tab = ft_strsplit(str, '-');
 	room1 = ft_room_finder(ah, tab[0]);
 	room2 = ft_room_finder(ah, tab[1]);
