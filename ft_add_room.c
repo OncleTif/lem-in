@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 15:48:29 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/30 16:28:26 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/30 17:44:03 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	ft_add_room(t_anthill *ah, char	*name)
 	{
 		while (rooms->next)
 		{
+			if (ft_strequ(name, rooms->name))
+				return (0);
 			rooms = rooms->next;
 			new_room->num++;
 		}
