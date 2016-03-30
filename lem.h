@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/25 15:14:36 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/29 12:08:53 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/30 16:05:52 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct s_anthill	t_anthill;
 struct						s_anthill
 {
 	int			ants;
-
+	t_room		*rooms;
 
 };
 
@@ -29,8 +29,12 @@ struct						s_room
 	char		*name;
 	int			begin;
 	int			end;
+	int			num;
 
+	t_room		*next;
 
 };
 
+t_anthill	*ft_reader(void);
+void		ft_add_room(t_anthill *ah, char *name);
 #endif

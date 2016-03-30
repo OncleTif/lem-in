@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/25 15:13:03 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/30 15:45:37 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ FLAGS = -Wall -Wextra -Werror
 LIB = libft/libft.a
 
 SRC =   main.c \
-
+		ft_reader.c
 
 OBJ = $(SRC:.c=.o)
 
