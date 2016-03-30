@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_line_reader.c                                   :+:      :+:    :+:   */
+/*   ft_room_finder.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/30 15:47:05 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/30 16:52:41 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/30 17:23:51 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/30 17:27:11 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem.h"
 
-int	ft_line_reader(t_anthill *ah)
+t_room	*ft_room_finder(t_anthill *ah, char *str)
 {
-	char	*str;
-	char	*end;
-	int		ret;
+	t_room	*room;
 
-	ret = 1;
-	if ((get_next_line(0, &str)) < 1)
-		return (0);
-	if (str[0] == '#')
-		ft_com(ah, str);
-	else
-	{
-		if ((end = ft_strchr(str, ' ')))
-			ret = ft_add_room(ah, ft_strsub(str, 0, end - str));
-		else
-			ret = ft_
-	}
-	ft_strdel(&str);
-	return (ret);
+	room = ah->rooms;
+	while (room && !ft_strequ(str, room->name))
+		room = room->next;
+	return (room);
 }
