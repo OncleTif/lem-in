@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/25 15:14:36 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/31 14:45:04 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/31 17:20:23 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ struct						s_anthill
 	int			next_end;
 	int			not_first;
 	t_list		*input;
+	t_list		*bst_path;
 };
 
 struct						s_room
