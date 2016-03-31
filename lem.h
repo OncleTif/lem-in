@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/25 15:14:36 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/31 12:16:18 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/31 14:45:04 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ void						ft_com(t_anthill *ah, char *str);
 t_room						*ft_room_finder(t_anthill *ah, char *str);
 int							ft_add_link(t_anthill *ah, char *str);
 int							ft_line_reader(t_anthill *ah);
+void						ft_print_room(t_room *room);
 void						ft_print_anthill(t_anthill *ah);
 void						ft_print_input(t_anthill *ah);
 void						ft_anthill_validator(t_anthill *ah);
+void						ft_dijkstra(t_room *room);
 #endif
