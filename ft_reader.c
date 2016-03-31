@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 12:08:19 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/31 14:37:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/31 15:43:36 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,7 @@ t_anthill	*ft_reader(void)
 	}
 	ft_anthill_validator(ah);
 	ft_dijkstra(ah->start);
+	if (!ah->end->lgt && ah->start != ah->end)
+		ft_error("No Path can be found");
 	return (ah);
 }
