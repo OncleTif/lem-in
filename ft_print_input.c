@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_input.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/25 15:13:32 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/31 12:17:41 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/31 12:13:13 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/31 12:15:55 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem.h"
 
-int	main(int argc, char **argv)
+void	ft_print_input(t_anthill *ah)
 {
-	t_anthill	*ah;
+	t_list	*elem;
 
-	argc--;
-	argv++;
-	ah = ft_reader();
-//	ft_print_anthill(ah);
-	ft_print_input(ah);
-	return (0);
+	elem = ah->input;
+	while (elem)
+	{
+		ft_putendl((char*)elem->content);
+		elem = elem->next;
+	}
 }
