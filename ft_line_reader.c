@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 15:47:05 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/31 12:20:51 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/31 12:23:16 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int	ft_line_reader(t_anthill *ah)
 		ah->not_first = 1;
 	}
 	if (ret)
-		ft_lstpush_back(&ah->input, ft_lstnew(str, ft_strlen(str) + 1));
+		ft_lstpush_back(&ah->input, ft_lstnew(&str, sizeof(str)));
 	return (ret);
 }
