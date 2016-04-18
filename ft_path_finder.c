@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/31 17:23:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/31 17:24:59 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/04/18 10:28:20 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_path_finder(t_anthill *ah)
 {
-t_room	*room;
+	t_room	*room;
 
-room = ah->end;
+	room = ah->end;
 
 
 }
