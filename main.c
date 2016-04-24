@@ -23,5 +23,6 @@ int	main(int argc, char **argv)
 	ft_print_anthill(ah);
 	ft_path_finder(ah);
 	ft_print_path(ah);
+	ft_print_linear(ah);
 	return (0);
 }

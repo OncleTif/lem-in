@@ -51,6 +51,7 @@ int							ft_line_reader(t_anthill *ah);
 void						ft_print_room(t_room *room);
 void						ft_print_anthill(t_anthill *ah);
 void						ft_print_input(t_anthill *ah);
+void						ft_print_linear(t_anthill *ah);
 void						ft_anthill_validator(t_anthill *ah);
 void						ft_dijkstra(t_room *room);
 void						ft_path_finder(t_anthill *ah);

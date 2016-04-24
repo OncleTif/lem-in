@@ -26,6 +26,7 @@ SRC =   main.c \
 		ft_print_input.c \
 		ft_print_room.c \
 		ft_print_path.c \
+		ft_print_linear.c \
 		ft_path_finder.c \
 		ft_dijkstra.c \
 		ft_line_reader.c \
