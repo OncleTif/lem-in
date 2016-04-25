@@ -28,7 +28,7 @@ void	ft_print_linear(t_anthill *ah)
 {
 	int		ants;
 
-	ants = 2;
+	ants = 1;
 	while (ants <= ah->ants + ah->end->lgt)
 	{
 		ft_linear_cycle(ah, ants);
