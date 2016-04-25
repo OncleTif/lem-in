@@ -20,9 +20,9 @@ int	main(int argc, char **argv)
 	argv++;
 	ah = ft_reader();
 	ft_print_input(ah);
-	ft_print_anthill(ah);
+	//ft_print_anthill(ah);
 	ft_path_finder(ah);
-	ft_print_path(ah);
+	//ft_print_path(ah);
 	ft_print_linear(ah);
 	return (0);
 }
