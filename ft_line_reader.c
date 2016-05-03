@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 15:47:05 by tmanet            #+#    #+#             */
-/*   Updated: 2016/05/03 10:19:10 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/03 11:19:52 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_line_reader(t_anthill *ah)
 	else if (ah->not_first)
 	{
 		if ((end = ft_strchr(str, ' ')))
-			ret = ft_add_room(ah, ft_strsub(str, 0, end - str));
+			ret = ft_get_room(ah, str);
 		else
 			ret = ft_add_link(ah, str);
 	}

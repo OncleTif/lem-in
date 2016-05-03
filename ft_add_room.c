@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 15:48:29 by tmanet            #+#    #+#             */
-/*   Updated: 2016/05/03 09:21:53 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/03 11:53:13 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	first_last(t_anthill *ah, t_room *room)
 	}
 }
 
-int			ft_add_room(t_anthill *ah, char *name)
+static	int	ft_add_room(t_anthill *ah, char *name)
 {
 	t_room	*rooms;
 	t_room	*new_room;
@@ -55,4 +55,16 @@ int			ft_add_room(t_anthill *ah, char *name)
 	else
 		ah->rooms = new_room;
 	return (1);
+}
+
+int			ft_get_room(t_anthill *ah, char *line)
+{
+	char	**tab;
+
+	tab = ft_strsplit(line, ' ');
+	if (!tab[0] || !tab[1] || !tab[2] || !tab[3] || tab[3][0] ||
+			tab[0][0] == 'L' || ah->links_started || !ft_isnumber(tab[1]) ||
+			!ft_isnumber(tab[2]) || ft_strchr(tab[0], '-'))
+		return (0);
+	return (ft_add_room(ah, tab[0]));
 }
