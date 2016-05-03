@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/31 17:23:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/04/19 12:28:28 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/03 09:12:43 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ static t_room	*ft_next_finder(t_room *room)
 	{
 		if ((*(t_room**)elem->content)->lgt < room->lgt)
 			nxt = *(t_room**)elem->content;
-		elem= elem->next;
+		elem = elem->next;
 	}
 	return (nxt);
 }
 
-void	ft_path_finder(t_anthill *ah)
+void			ft_path_finder(t_anthill *ah)
 {
 	t_room	*room;
 

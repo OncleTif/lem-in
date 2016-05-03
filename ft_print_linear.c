@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/27 17:57:57 by tmanet            #+#    #+#             */
-/*   Updated: 2016/04/27 17:58:00 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/03 09:13:16 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	ft_linear_cycle(t_anthill *ah, int ants)
 	}
 }
 
-void	ft_print_linear(t_anthill *ah)
+void		ft_print_linear(t_anthill *ah)
 {
 	int		ants;
 
