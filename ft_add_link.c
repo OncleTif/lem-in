@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 16:56:25 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/31 17:16:45 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/03 09:22:33 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int	ft_add_link(t_anthill *ah, char *str)
 		return (0);
 	ft_lstpush_back(&room1->links, ft_lstnew(&room2, sizeof(room2)));
 	ft_lstpush_back(&room2->links, ft_lstnew(&room1, sizeof(room1)));
+	ah->links_started = 1;
 	return (1);
 }

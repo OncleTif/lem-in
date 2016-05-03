@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 15:48:29 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/30 19:06:29 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/03 09:21:53 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int			ft_add_room(t_anthill *ah, char *name)
 	t_room	*rooms;
 	t_room	*new_room;
 
-	if (!name || name[0] == 'L')
+	if (!name || name[0] == 'L' || ah->links_started)
 		return (0);
 	if (!(new_room = (t_room*)ft_memalloc(sizeof(*new_room))))
 		ft_error("room allocation error");
