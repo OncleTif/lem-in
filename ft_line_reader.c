@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 15:47:05 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/31 17:16:19 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/03 09:49:07 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_line_reader(t_anthill *ah)
 	if ((get_next_line(0, &str)) < 1)
 		return (0);
 	if (str[0] == '#')
-		ft_com(ah, str);
+		ret = ft_com(ah, str);
 	else if (ah->not_first)
 	{
 		if ((end = ft_strchr(str, ' ')))
