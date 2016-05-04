@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 15:48:29 by tmanet            #+#    #+#             */
-/*   Updated: 2016/05/03 11:56:42 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/04 10:07:50 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int			ft_get_room(t_anthill *ah, char *line)
 	tab = ft_strsplit(line, ' ');
 	if (!tab[0] || !tab[1] || !tab[2] || tab[3] ||
 			tab[0][0] == 'L' || ah->links_started || !ft_isnumber(tab[1]) ||
-			!ft_isnumber(tab[2]) || ft_strchr(tab[0], '-'))
+			!ft_isnumber(tab[2]))
 		return (0);
 	return (ft_add_room(ah, tab[0]));
 }

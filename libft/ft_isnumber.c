@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/03 11:36:04 by tmanet            #+#    #+#             */
-/*   Updated: 2016/05/03 11:39:12 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/04 10:35:16 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isnumber(char *str)
 	ret = (str[i] != 0);
 	while (str[i])
 	{
-		if (!ft_isdigit(str[i]))
+		if (!ft_isdigit(str[i]) && (i && str[0] != '-'))
 			ret = 0;
 		i++;
 	}
