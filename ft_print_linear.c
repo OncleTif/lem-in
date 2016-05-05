@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/27 17:57:57 by tmanet            #+#    #+#             */
-/*   Updated: 2016/05/03 09:13:16 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/05/05 11:17:26 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ static void	ft_linear_cycle(t_anthill *ah, int ants)
 				ft_putchar(' ');
 			first = 0;
 			ft_putchar('L');
-			ft_putstr((*(t_room**)elem->content)->name);
-			ft_putchar('-');
 			ft_putnbr(ants - (*(t_room**)elem->content)->lgt);
+			ft_putchar('-');
+			ft_putstr((*(t_room**)elem->content)->name);
 		}
 		elem = elem->next;
 	}
